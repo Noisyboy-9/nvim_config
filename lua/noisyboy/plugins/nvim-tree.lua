@@ -31,7 +31,17 @@ tree.setup({
         open_file = {
             window_picker = {
                 enable = false,
-            }
+            },
+            quit_on_open = true,
+            resize_window = true
+        },
+        change_dir = {
+            enable = false,
+            global = false, 
         }
-    }
+    },
+    disable_netrw = true,
+    hijack_netrw = true,
+    prefer_startup_root = false,
+    sync_root_with_cwd = true,
 })

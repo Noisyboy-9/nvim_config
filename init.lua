@@ -17,6 +17,7 @@ require("noisyboy.plugins.nvim-cmp")
 require("noisyboy.plugins.tree-sitter")
 require("noisyboy.plugins.bufjump")
 require("noisyboy.plugins.tabby")
+require("noisyboy.plugins.workspae")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")

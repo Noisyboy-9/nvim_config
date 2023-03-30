@@ -89,6 +89,7 @@ return packer.startup({function(use)
     -- golang 
     use 'fatih/vim-go'
 
+    use 'natecraddock/workspaces.nvim'
     if packer_bootstrap then
         require('packer').sync()
     end
