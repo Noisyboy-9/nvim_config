@@ -10,6 +10,12 @@ if not ok then
     return
 end
 
+local ok, lspkind= pcall(require, "lspkind")
+if not ok then
+    print("can't require lspkind")
+    return
+end
+
 require('luasnip/loaders/from_vscode').lazy_load()
 
 vim.opt.completeopt= {"menu", "menuone", "noselect"}
@@ -53,4 +59,11 @@ cmp.setup({
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
     },
+
+    formatting = {
+        format = lspkind.cmp_format({
+            maxwidth = 50,
+            ellipsis_char = "..."
+        })
+    }
 })

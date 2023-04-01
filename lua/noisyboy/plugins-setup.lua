@@ -43,7 +43,10 @@ return packer.startup({function(use)
     use 'kwkarlwang/bufjump.nvim'
     use 'nanozuki/tabby.nvim'
     use {'akinsho/toggleterm.nvim', tag = '*'}
+
+    -- git
     use {'kdheepak/lazygit.nvim'}
+    use {'lewis6991/gitsigns.nvim'}
 
 
 

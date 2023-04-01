@@ -20,11 +20,12 @@ require("noisyboy.plugins.tabby")
 require("noisyboy.plugins.workspae")
 require("noisyboy.plugins.trouble")
 require("noisyboy.plugins.toggleterm")
+require("noisyboy.plugins.gitsigns")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
-require("noisyboy.plugins.lsp.lsp-config")
 require("noisyboy.plugins.lsp.lspsaga")
+require("noisyboy.plugins.lsp.lsp-config")
 
 -- folding
 require("noisyboy.plugins.nvim-ufo")
