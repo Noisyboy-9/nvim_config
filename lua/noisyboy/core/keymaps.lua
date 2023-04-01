@@ -74,4 +74,4 @@ keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", remapOpts)
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
 
 -- toggle term 
-keymap.set("n", "<leader>g", "<cmd>LazyGit<cr>")
+keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>")

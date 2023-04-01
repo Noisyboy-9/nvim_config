@@ -1,18 +1,36 @@
 local ok, toggleterm = pcall(require, "toggleterm")
-
 if not ok then
     print("can't require toggleterm")
     return
 end
 
-toggleterm.setup({
-    size = function (term)
-        if term.direction == "horizontal" then
-            return 15
-        elseif term.direction == "vertical" then
-            return vim.o.columns * 0.4
-        end
-    end,
-    close_on_exit = false,
+
+-- integrate into lazygit
+local Terminal = require("toggleterm.terminal").Terminal
+if not ok then
+    print("can't require toggleterm.terminal")
+    return
+end
+
+local lazygit = Terminal:new({
+      cmd = "lazygit",
+      dir = "git_dir",
+      direction = "float",
+      float_opts = {
+        border = "double",
+      },
+      -- function to run on opening the terminal
+      on_open = function(term)
+        vim.cmd("startinsert!")
+        vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+      end,
+      -- function to run on closing the terminal
+      on_close = function(term)
+        vim.cmd("startinsert!")
+      end,
 })
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
 
