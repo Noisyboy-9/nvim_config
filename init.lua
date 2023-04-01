@@ -18,6 +18,8 @@ require("noisyboy.plugins.tree-sitter")
 require("noisyboy.plugins.bufjump")
 require("noisyboy.plugins.tabby")
 require("noisyboy.plugins.workspae")
+require("noisyboy.plugins.trouble")
+require("noisyboy.plugins.toggleterm")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
