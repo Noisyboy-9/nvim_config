@@ -96,6 +96,9 @@ return packer.startup({function(use)
     -- golang 
     use 'fatih/vim-go'
 
+    -- formatters
+    use { 'mhartington/formatter.nvim' }
+
     if packer_bootstrap then
         require('packer').sync()
     end

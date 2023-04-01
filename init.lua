@@ -21,6 +21,7 @@ require("noisyboy.plugins.workspae")
 require("noisyboy.plugins.trouble")
 require("noisyboy.plugins.toggleterm")
 require("noisyboy.plugins.gitsigns")
+require("noisyboy.plugins.formatter")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
