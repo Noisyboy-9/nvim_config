@@ -24,6 +24,7 @@ require("noisyboy.plugins.toggleterm")
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
 require("noisyboy.plugins.lsp.lsp-config")
+require("noisyboy.plugins.lsp.lspsaga")
 
 -- folding
 require("noisyboy.plugins.nvim-ufo")

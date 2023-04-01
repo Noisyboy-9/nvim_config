@@ -73,5 +73,15 @@ keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", remapOpts)
 keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", remapOpts)
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
 
--- toggle term 
+--  lazygit
 keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>")
+
+-- lsp saga
+keymap.set("n", "<leader>use", "<cmd>Lspsaga lsp_finder<CR>")
+keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+keymap.set("n", "rn", "<cmd>Lspsaga rename<CR>")
+keymap.set("n", "rn", "<cmd>Lspsaga rename ++project<CR>")
+keymap.set("n","gd", "<cmd>Lspsaga goto_definition<CR>")
+keymap.set("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
+keymap.set("n","<leader>6", "<cmd>Lspsaga show_workspace_diagnostics<cr>")
+keymap.set({"n", "t"}, "<leader>t", "<cmd>Lspsaga term_toggle<cr>")
