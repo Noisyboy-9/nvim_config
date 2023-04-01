@@ -5,5 +5,14 @@ if not ok then
     return
 end
 
-toggleterm.setup()
+toggleterm.setup({
+    size = function (term)
+        if term.direction == "horizontal" then
+            return 15
+        elseif term.direction == "vertical" then
+            return vim.o.columns * 0.4
+        end
+    end,
+    close_on_exit = false,
+})
 

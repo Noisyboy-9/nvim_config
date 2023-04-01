@@ -75,3 +75,4 @@ keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
 
 -- toggle term 
 keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
+keymap.set("t", "<leader>t", "<cmd>ToggleTerm<cr>")
