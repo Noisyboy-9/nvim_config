@@ -64,3 +64,11 @@ end
 keymap.set("n", "zR", ufo.openAllFolds)
 keymap.set("n", "zM", ufo.closeAllFolds)
 
+-- trouble
+local remapOpts = {silent = true, noremap = true}
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", remapOpts)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", remapOpts)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", remapOpts)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", remapOpts)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", remapOpts)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
