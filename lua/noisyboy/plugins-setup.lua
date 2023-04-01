@@ -28,6 +28,8 @@ end
 return packer.startup({function(use)
     --basic
     use 'wbthomason/packer.nvim'
+    use 'natecraddock/workspaces.nvim'
+    use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"}
     use 'nvim-lua/plenary.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
@@ -40,6 +42,7 @@ return packer.startup({function(use)
     use 'numToStr/Comment.nvim'
     use 'kwkarlwang/bufjump.nvim'
     use 'nanozuki/tabby.nvim'
+    use {"akinsho/toggleterm.nvim", tag = '*'}
 
 
 
@@ -89,9 +92,6 @@ return packer.startup({function(use)
     -- golang 
     use 'fatih/vim-go'
 
-    use 'natecraddock/workspaces.nvim'
-
-    use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"}
 
     if packer_bootstrap then
         require('packer').sync()
