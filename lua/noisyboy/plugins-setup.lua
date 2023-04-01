@@ -42,7 +42,8 @@ return packer.startup({function(use)
     use 'numToStr/Comment.nvim'
     use 'kwkarlwang/bufjump.nvim'
     use 'nanozuki/tabby.nvim'
-    use {"akinsho/toggleterm.nvim", tag = '*'}
+    use {'akinsho/toggleterm.nvim', tag = '*'}
+    use {'kdheepak/lazygit.nvim'}
 
 
 
@@ -91,7 +92,6 @@ return packer.startup({function(use)
 
     -- golang 
     use 'fatih/vim-go'
-
 
     if packer_bootstrap then
         require('packer').sync()
