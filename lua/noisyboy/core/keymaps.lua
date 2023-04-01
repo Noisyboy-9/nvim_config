@@ -73,10 +73,5 @@ keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", remapOpts)
 keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", remapOpts)
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
 
-<<<<<<< HEAD
 -- toggle term 
-keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
-keymap.set("t", "<leader>t", "<cmd>ToggleTerm<cr>")
-=======
 keymap.set("n", "<leader>g", "<cmd>LazyGit<cr>")
->>>>>>> setup_lazygit
