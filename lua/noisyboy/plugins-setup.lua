@@ -90,6 +90,9 @@ return packer.startup({function(use)
     use 'fatih/vim-go'
 
     use 'natecraddock/workspaces.nvim'
+
+    use { "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons"}
+
     if packer_bootstrap then
         require('packer').sync()
     end
