@@ -38,7 +38,7 @@ keymap.set("n", "<leader>fs", ":Telescope live_grep<CR>") -- search all project 
 keymap.set("n", "<leader>fc", ":Telescope grep_string<CR>") -- search file for pattern
 keymap.set("n", "<leader>fe", ":Telescope buffers<CR>") -- recently opened file
 keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
-keymap.set("n", "<leader>fp", ":Telescope project<CR>")
+keymap.set("n", "<leader>fp", ":Telescope workspaces<CR>")
 
 
 -- lsp keymaps 
