@@ -41,20 +41,6 @@ keymap.set("n", "<leader>fp", "<cmd>Telescope workspaces<CR>")
 keymap.set("n", "<leader>fo", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>")
 
 
--- lsp keymaps 
-local bufopts = { noremap=true, silent=true, buffer=bufnr }
-keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-keymap.set('n', 'rn', vim.lsp.buf.rename, bufopts)
-keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-
-
-
 -- code folding 
 local ok, ufo = pcall(require, "ufo")
 if not ok then
