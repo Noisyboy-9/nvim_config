@@ -66,9 +66,12 @@ keymap.set("n", "zM", ufo.closeAllFolds)
 
 -- trouble
 local remapOpts = {silent = true, noremap = true}
-vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", remapOpts)
-vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", remapOpts)
-vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", remapOpts)
-vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", remapOpts)
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", remapOpts)
-vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
+keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", remapOpts)
+keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", remapOpts)
+keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", remapOpts)
+keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", remapOpts)
+keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", remapOpts)
+keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",remapOpts)
+
+-- toggle term 
+keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>")
