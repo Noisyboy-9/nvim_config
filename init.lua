@@ -23,6 +23,7 @@ require("noisyboy.plugins.toggleterm")
 require("noisyboy.plugins.gitsigns")
 require("noisyboy.plugins.formatter")
 require("noisyboy.plugins.go")
+require("noisyboy.plugins.luasnip")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
