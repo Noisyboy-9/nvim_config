@@ -92,7 +92,8 @@ return packer.startup({
 		use("rafamadriz/friendly-snippets")
 
 		-- golang
-		use("fatih/vim-go")
+        use("ray-x/go.nvim")
+        use("ray-x/guihua.lua")
 
 		-- formatters
 		use({ "mhartington/formatter.nvim" })
