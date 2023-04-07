@@ -1,6 +1,11 @@
 {
     "diagnostics.globals": [
         "vim",
-        "bufnr"
+        "bufnr",
+        "opts",
+        "types"
+    ],
+    "diagnostics.disable": [
+        "unused-local"
     ]
 }
