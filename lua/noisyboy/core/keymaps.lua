@@ -1,6 +1,9 @@
 vim.g.mapleader = ","
 local keymap = vim.keymap
 
+-- source settings
+keymap.set("n","<leader>ss", "<cmd>so ~/.config/nvim/init.lua<cr>", {silent = false})
+
 -- general keymaps
 keymap.set("n", "<leader>nh", "<cmd>nohlsearch<CR>")
 keymap.set("n", "x", '"_x')
