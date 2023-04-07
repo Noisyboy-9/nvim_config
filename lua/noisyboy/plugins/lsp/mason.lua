@@ -21,6 +21,8 @@ mason_lspconfig.setup({
         "bashls",
         "dockerls",
         "docker_compose_language_service",
+        "cmake-language-server",
+        "clangd"
     },
     automatic_installation = true,
 })

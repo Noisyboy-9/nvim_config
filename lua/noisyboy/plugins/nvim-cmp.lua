@@ -16,11 +16,10 @@ if not ok then
     return
 end
 
-require('luasnip/loaders/from_vscode').lazy_load()
 
 vim.opt.completeopt= {"menu", "menuone", "noselect"}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
-vim.api.nvim_set_option('updatetime', 300) 
+vim.api.nvim_set_option('updatetime', 300)
 
 vim.cmd([[
 set signcolumn=yes
@@ -31,7 +30,7 @@ autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 
 cmp.setup({
     snippet = {
-        expand = function (args) 
+        expand = function (args)
             luasnip.lsp_expand(args.body)
         end,
     },

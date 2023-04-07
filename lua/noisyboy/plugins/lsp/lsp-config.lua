@@ -177,17 +177,47 @@ lspconfig["lua_ls"].setup({
 })
 
 -- setting up python lsp
-lspconfig["pylsp"].setup({})
+lspconfig["pylsp"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+
+})
 
 -- setting up yaml lsp
-lspconfig["yamlls"].setup({})
+lspconfig["yamlls"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+})
 
 -- setting up bash lsp
-lspconfig["bashls"].setup({})
+lspconfig["bashls"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+})
 
 -- setting up docker lsp
-lspconfig["dockerls"].setup({})
+lspconfig["dockerls"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- setting up clang language server 
+lspconfig["clangd"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+-- setting up cmake language server 
+lspconfig["cmake"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 
 -- setting up docker-compose lsp
-lspconfig["docker_compose_language_service"].setup({})
+lspconfig["docker_compose_language_service"].setup({
+    capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 
