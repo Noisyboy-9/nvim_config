@@ -36,12 +36,15 @@ keymap.set("n", "<leader>pe", "<cmd>NvimTreeToggle<CR>")
 
 -- telescope 
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- fuzzy find files
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>") -- search all project for pattern
+keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>") -- search file for pattern
 keymap.set("n", "<leader>fe", "<cmd>Telescope buffers<CR>") -- recently opened file
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
 keymap.set("n", "<leader>fp", "<cmd>Telescope workspaces<CR>")
 keymap.set("n", "<leader>fo", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>")
+keymap.set("n", "<leader>fs", function ()
+    require("telescope.builtin").grep_string({search = vim.fn.input("Grep > ")})
+end) -- search all project for pattern
 
 
 -- code folding 
