@@ -66,6 +66,7 @@ return packer.startup({
 			"nvim-telescope/telescope-file-browser.nvim",
 			requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 		})
+        use('theprimeagen/harpoon')
 
 		-- auto completion
 		use("hrsh7th/nvim-cmp")
