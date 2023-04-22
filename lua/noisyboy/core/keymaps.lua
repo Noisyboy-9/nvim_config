@@ -1,3 +1,4 @@
+---@diagnostic disable: redefined-local
 vim.g.mapleader = ","
 local keymap = vim.keymap
 
@@ -38,7 +39,6 @@ keymap.set("n", "<leader>pe", "<cmd>NvimTreeToggle<CR>")
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>") -- fuzzy find files
 keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<CR>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>") -- search file for pattern
-keymap.set("n", "<leader>fe", "<cmd>Telescope buffers<CR>") -- recently opened file
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>")
 keymap.set("n", "<leader>fp", "<cmd>Telescope workspaces<CR>")
 keymap.set("n", "<leader>fo", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>")
@@ -77,3 +77,15 @@ keymap.set("n","gd", "<cmd>Lspsaga goto_definition<CR>")
 keymap.set("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
 keymap.set("n","<leader>6", "<cmd>Lspsaga show_workspace_diagnostics<cr>")
 keymap.set({"n", "t"}, "<leader>t", "<cmd>Lspsaga term_toggle<cr>")
+
+-- harpoon
+local ok, harpoon = pcall(require, "harpoon")
+if not ok then
+   print("can't require harpoon from keymaps file")
+    return
+end
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+keymap.set("n", "<leader>a", mark.add_file)
+keymap.set("n", "<leader>fe", ui.toggle_quick_menu)
