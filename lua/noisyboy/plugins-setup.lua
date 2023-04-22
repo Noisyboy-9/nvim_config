@@ -34,7 +34,7 @@ return packer.startup({
 		use("nvim-lua/plenary.nvim")
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 		use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
-		use({ "ellisonleao/gruvbox.nvim" })
+        use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use("nvim-tree/nvim-web-devicons")
 		use("Pocco81/auto-save.nvim")
 		use("windwp/nvim-autopairs")
