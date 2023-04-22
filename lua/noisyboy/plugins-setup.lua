@@ -44,9 +44,9 @@ return packer.startup({
 		use("nanozuki/tabby.nvim")
 		use({ "akinsho/toggleterm.nvim", tag = "*" })
 
-        -- colorscheme
-        use({ 'rose-pine/neovim', as = 'rose-pine' })
-        use ('xiyaowong/transparent.nvim')
+		-- colorscheme
+		use({ "rose-pine/neovim", as = "rose-pine" })
+		use("xiyaowong/transparent.nvim")
 
 		-- git
 		use({ "kdheepak/lazygit.nvim" })
@@ -60,47 +60,39 @@ return packer.startup({
 			tag = "0.1.1",
 			requires = { { "nvim-lua/plenary.nvim" } },
 		})
-        use ("debugloop/telescope-undo.nvim")
+		use("debugloop/telescope-undo.nvim")
 		use({ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" } })
 		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 		use({
 			"nvim-telescope/telescope-file-browser.nvim",
 			requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 		})
-        use('theprimeagen/harpoon')
-
-		-- auto completion
-		use("hrsh7th/nvim-cmp")
-		use("hrsh7th/cmp-path")
-		use("hrsh7th/cmp-buffer")
-		use("hrsh7th/cmp-nvim-lsp")
-		use("hrsh7th/cmp-cmdline")
-
-		use("onsails/lspkind.nvim")
+		use("theprimeagen/harpoon")
+		-- lsp
 		use({
-			"glepnir/lspsaga.nvim",
-			branch = "main",
+			"VonHeikemen/lsp-zero.nvim",
+			branch = "v2.x",
 			requires = {
-				{ "nvim-tree/nvim-web-devicons" },
-				{ "nvim-treesitter/nvim-treesitter" },
+				{ "neovim/nvim-lspconfig" },
+				{
+					"williamboman/mason.nvim",
+					run = function()
+						pcall(vim.cmd, "MasonUpdate")
+					end,
+				},
+				{ "williamboman/mason-lspconfig.nvim" },
+				{ "hrsh7th/nvim-cmp" },
+				{ "hrsh7th/cmp-nvim-lsp" },
+				{ "L3MON4D3/LuaSnip" },
+                {"hrsh7th/cmp-path"},
+                {"hrsh7th/cmp-buffer"},
+                {"hrsh7th/cmp-cmdline"},
+                {"onsails/lspkind.nvim"},
 			},
 		})
 
-		-- lsp server
-		use("williamboman/mason.nvim")
-		use("williamboman/mason-lspconfig.nvim")
-		use("neovim/nvim-lspconfig")
 		use("simrat39/rust-tools.nvim")
 		use("hrsh7th/cmp-nvim-lsp-signature-help")
-
-		-- snippets
-		use({
-			"L3MON4D3/LuaSnip",
-			requires = {
-				"saadparwaiz1/cmp_luasnip",
-				"rafamadriz/friendly-snippets",
-			},
-		})
 
 		-- golang
 		use("ray-x/go.nvim")

@@ -28,7 +28,6 @@ require("noisyboy.plugins.transparent")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
-require("noisyboy.plugins.lsp.lspsaga")
 require("noisyboy.plugins.lsp.lsp-config")
 
 -- folding
