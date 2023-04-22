@@ -34,7 +34,6 @@ return packer.startup({
 		use("nvim-lua/plenary.nvim")
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 		use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
-        use({ 'rose-pine/neovim', as = 'rose-pine' })
 		use("nvim-tree/nvim-web-devicons")
 		use("Pocco81/auto-save.nvim")
 		use("windwp/nvim-autopairs")
@@ -44,6 +43,10 @@ return packer.startup({
 		use("kwkarlwang/bufjump.nvim")
 		use("nanozuki/tabby.nvim")
 		use({ "akinsho/toggleterm.nvim", tag = "*" })
+
+        -- colorscheme
+        use({ 'rose-pine/neovim', as = 'rose-pine' })
+        use ('xiyaowong/transparent.nvim')
 
 		-- git
 		use({ "kdheepak/lazygit.nvim" })
