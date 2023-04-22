@@ -60,6 +60,7 @@ return packer.startup({
 			tag = "0.1.1",
 			requires = { { "nvim-lua/plenary.nvim" } },
 		})
+        use ("debugloop/telescope-undo.nvim")
 		use({ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" } })
 		use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 		use({
