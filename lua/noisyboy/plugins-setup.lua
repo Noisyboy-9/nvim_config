@@ -37,7 +37,6 @@ return packer.startup({
 		use("nvim-tree/nvim-web-devicons")
 		use("Pocco81/auto-save.nvim")
 		use("windwp/nvim-autopairs")
-		use("christoomey/vim-tmux-navigator")
 		use("tpope/vim-surround")
 		use("numToStr/Comment.nvim")
 		use("kwkarlwang/bufjump.nvim")
@@ -73,6 +72,7 @@ return packer.startup({
 			"VonHeikemen/lsp-zero.nvim",
 			branch = "v2.x",
 			requires = {
+				{ "williamboman/mason-lspconfig.nvim" },
 				{ "neovim/nvim-lspconfig" },
 				{
 					"williamboman/mason.nvim",
@@ -80,14 +80,19 @@ return packer.startup({
 						pcall(vim.cmd, "MasonUpdate")
 					end,
 				},
-				{ "williamboman/mason-lspconfig.nvim" },
+
+				-- autocomplete
 				{ "hrsh7th/nvim-cmp" },
+				{ "hrsh7th/cmp-buffer" },
+				{ "hrsh7th/cmp-path" },
+				{ "saadparwaiz1/cmp_luasnip" },
 				{ "hrsh7th/cmp-nvim-lsp" },
+				{ "hrsh7th/cmp-nvim-lua" },
+				{ "hrsh7th/cmp-cmdline" },
+
+                -- snippets
 				{ "L3MON4D3/LuaSnip" },
-                {"hrsh7th/cmp-path"},
-                {"hrsh7th/cmp-buffer"},
-                {"hrsh7th/cmp-cmdline"},
-                {"onsails/lspkind.nvim"},
+				{ "onsails/lspkind.nvim" },
 			},
 		})
 
