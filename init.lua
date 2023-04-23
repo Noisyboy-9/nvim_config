@@ -7,7 +7,6 @@ require("noisyboy.core.colorscheme")
 require("noisyboy.core.keymaps")
 
 -- plugins
-require("noisyboy.plugins.auto-save")
 require("noisyboy.plugins.nvim-autopairs")
 require("noisyboy.plugins.comment")
 require("noisyboy.plugins.nvim-tree")
