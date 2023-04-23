@@ -46,7 +46,13 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+-- folding
 opt.foldcolumn = "1"
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
+
+-- spell checker
+opt.spelllang = 'en_us'
+opt.spell = true
+
