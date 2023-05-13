@@ -1,11 +1,7 @@
 local lsp = require("lsp-zero")
+local lspkind = require("lspkind")
 
 lsp.preset("recommended")
-
-lsp.ensure_installed({
-    'tsserver',
-    'rust_analyzer',
-})
 
 -- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
@@ -58,4 +54,15 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
+})
+
+cmp.setup({
+    formatting = {
+        fields = { 'abbr', 'kind', 'menu' },
+        format = lspkind.cmp_format({
+            mode = 'symbol',       -- show only symbol annotations
+            maxwidth = 50,         -- prevent the popup from showing more than provided characters
+            ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+        })
+    }
 })

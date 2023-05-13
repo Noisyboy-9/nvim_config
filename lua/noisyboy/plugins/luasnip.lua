@@ -10,15 +10,15 @@ require("luasnip.loaders.from_lua").lazy_load({ paths = vim.g.lua_snippets_path 
 local types = require 'luasnip.util.types'
 
 luasnip.config.setup({
-	history = true,
-	native_menu = true,
-	updateevents = "TextChanged,TextChangedI",
-	enable_autosnippets = true,
-	ext_opts = {
-		[types.choiceNode] = {
-			active = {
-				virt_text = { { "●", "GruvboxOrange" } },
-			},
-		},
-	},
+    history = true,
+    native_menu = true,
+    updateevents = "TextChanged,TextChangedI",
+    enable_autosnippets = true,
+    ext_opts = {
+        [types.choiceNode] = {
+            active = {
+                virt_text = { { "●", "GruvboxOrange" } },
+            },
+        },
+    },
 })
