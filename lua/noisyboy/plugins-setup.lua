@@ -65,7 +65,17 @@ return packer.startup({
             "nvim-telescope/telescope-file-browser.nvim",
             requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         })
+
+        -- theprimeagen
         use("theprimeagen/harpoon")
+        use {
+            "ThePrimeagen/refactoring.nvim",
+            requires = {
+                { "nvim-lua/plenary.nvim" },
+                { "nvim-treesitter/nvim-treesitter" }
+            }
+        }
+
         -- lsp
         use({
             "VonHeikemen/lsp-zero.nvim",
