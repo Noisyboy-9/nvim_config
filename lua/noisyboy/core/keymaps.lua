@@ -85,3 +85,18 @@ local ui = require("harpoon.ui")
 
 keymap.set("n", "<leader>a", mark.add_file)
 keymap.set("n", "<leader>fe", ui.toggle_quick_menu)
+
+
+-- refactoring
+keymap.set("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]],
+    { noremap = true, silent = true, expr = false })
+
+vim.api.nvim_set_keymap("v", "<leader>rf",
+    [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]],
+    { noremap = true, silent = true, expr = false })
+
+vim.api.nvim_set_keymap("v", "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]],
+    { noremap = true, silent = true, expr = false })
+
+vim.api.nvim_set_keymap("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]],
+    { noremap = true, silent = true, expr = false })
