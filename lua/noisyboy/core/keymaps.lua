@@ -50,6 +50,8 @@ keymap.set("n", "<leader>fs", function()
     require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
 end) -- search all project for pattern
 keymap.set("n", "<leader>u", "<cmd>Telescope undo<CR>")
+keymap.set("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>",
+    { noremap = true })
 
 
 -- code folding
