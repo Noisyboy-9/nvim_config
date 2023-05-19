@@ -102,6 +102,7 @@ return packer.startup({
                 -- snippets
                 { "L3MON4D3/LuaSnip" },
                 { "onsails/lspkind.nvim" },
+                { "rafamadriz/friendly-snippets" }
             },
         })
 
