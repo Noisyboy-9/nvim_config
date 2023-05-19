@@ -25,6 +25,7 @@ require("noisyboy.plugins.go")
 require("noisyboy.plugins.luasnip")
 require("noisyboy.plugins.transparent")
 require("noisyboy.plugins.refactoring")
+require("noisyboy.plugins.oil")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")

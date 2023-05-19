@@ -93,12 +93,16 @@ keymap.set("n", "<leader>fe", ui.toggle_quick_menu)
 keymap.set("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]],
     { noremap = true, silent = true, expr = false })
 
-vim.api.nvim_set_keymap("v", "<leader>rf",
+keymap.set("v", "<leader>rf",
     [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]],
     { noremap = true, silent = true, expr = false })
 
-vim.api.nvim_set_keymap("v", "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]],
+keymap.set("v", "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]],
     { noremap = true, silent = true, expr = false })
 
-vim.api.nvim_set_keymap("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]],
+keymap.set("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]],
     { noremap = true, silent = true, expr = false })
+
+
+-- oil
+keymap.set("n", "-", require("oil").open, { desc = "Open parent directory" })
