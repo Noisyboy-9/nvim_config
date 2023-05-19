@@ -50,7 +50,9 @@ return packer.startup({
         use({ "kdheepak/lazygit.nvim" })
         use({ "lewis6991/gitsigns.nvim" })
 
+        -- Project file system
         use({ "nvim-tree/nvim-tree.lua", requires = { "nvim-tree/nvim-web-devicons" } })
+        use({ 'stevearc/oil.nvim' })
 
         -- nvim telescope
         use({
