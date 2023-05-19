@@ -118,6 +118,12 @@ return packer.startup({
         -- formatters
         use({ "mhartington/formatter.nvim" })
 
+        -- nvim startup
+        use {
+            "startup-nvim/startup.nvim",
+            requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        }
+
         if packer_bootstrap then
             require("packer").sync()
         end
