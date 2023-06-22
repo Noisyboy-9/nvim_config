@@ -13,14 +13,14 @@ vim.g.loaded_netrwPlugin = 1
 tree.setup({
     renderer = {
         icons = {
-          glyphs = {
-            folder = {
-              arrow_closed = "", -- arrow when folder is closed
-              arrow_open = "", -- arrow when folder is open
+            glyphs = {
+                folder = {
+                    arrow_closed = "", -- arrow when folder is closed
+                    arrow_open = "", -- arrow when folder is open
+                },
             },
-          },
         },
-      },
+    },
 
     view = {
         side = "right",
@@ -37,11 +37,17 @@ tree.setup({
         },
         change_dir = {
             enable = false,
-            global = false, 
+            global = false,
         }
     },
     disable_netrw = true,
     hijack_netrw = true,
     prefer_startup_root = false,
     sync_root_with_cwd = true,
+    filters = {
+        dotfiles = false,
+    },
+    git = {
+        ignore = false
+    }
 })
