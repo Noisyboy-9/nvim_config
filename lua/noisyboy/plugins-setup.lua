@@ -123,6 +123,11 @@ return packer.startup({
             "startup-nvim/startup.nvim",
             requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         }
+        use {
+            'chipsenkbeil/distant.nvim',
+            branch = 'v0.2',
+        }
+
 
         if packer_bootstrap then
             require("packer").sync()
