@@ -28,6 +28,7 @@ require("noisyboy.plugins.refactoring")
 require("noisyboy.plugins.oil")
 require("noisyboy.plugins.startup")
 require("noisyboy.plugins.distant")
+require("noisyboy.plugins.whichkey")
 
 -- lsp related plugins
 require("noisyboy.plugins.lsp.mason")
