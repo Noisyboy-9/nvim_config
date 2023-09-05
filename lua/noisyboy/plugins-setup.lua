@@ -128,6 +128,7 @@ return packer.startup({
             branch = 'v0.2',
         }
 
+        use("folke/which-key.nvim")
 
         if packer_bootstrap then
             require("packer").sync()
