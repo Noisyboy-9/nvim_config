@@ -2,14 +2,11 @@
 vim.g.mapleader = ","
 local keymap = vim.keymap
 
--- visual mode
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")                                                 -- move selected line down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")                                                 -- move selected line up
 
--- source settings
-keymap.set("n", "<leader>ss", "<cmd>so ~/.config/nvim/init.lua<cr>", { silent = false })
+keymap.set("n", "<leader>ss", "<cmd>so ~/.config/nvim/init.lua<cr>", { silent = false }) -- source the init.lua file
 
--- general keymaps
 keymap.set("n", "<leader>nh", "<cmd>nohlsearch<CR>")
 keymap.set("n", "x", '"_x')
 
@@ -21,7 +18,6 @@ keymap.set("n", "<leader>se", "<C-w>=")         -- make split windows equal size
 keymap.set("n", "<leader>sx", "<cmd>close<CR>") -- close split window
 keymap.set("n", "<leader>h", "<C-w>h")          -- go to left split window
 keymap.set("n", "<leader>l", "<C-w>l")          -- go to right split window
-
 
 
 -- manage tabs
@@ -53,11 +49,6 @@ keymap.set("v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.ref
 
 
 -- code folding
-local ok, ufo = pcall(require, "ufo")
-if not ok then
-    print("can't require ufo")
-    return
-end
 vim.keymap.set('n', 'zO', require('ufo').openAllFolds)
 vim.keymap.set('n', 'zC', require('ufo').closeAllFolds)
 
