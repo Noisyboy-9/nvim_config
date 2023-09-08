@@ -4,6 +4,7 @@ local keymap = vim.keymap
 
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")                                                 -- move selected line down
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")                                                 -- move selected line up
+keymap.set("n", "q", "<nop>")                                                            -- disable key recordings
 
 keymap.set("n", "<leader>ss", "<cmd>so ~/.config/nvim/init.lua<cr>", { silent = false }) -- source the init.lua file
 
