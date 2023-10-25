@@ -129,6 +129,12 @@ return packer.startup({
         }
 
         use("folke/which-key.nvim")
+        use {
+            "tpope/vim-dadbod",
+            requires = {
+                "kristijanhusak/vim-dadbod-ui"
+            }
+        }
 
         if packer_bootstrap then
             require("packer").sync()
