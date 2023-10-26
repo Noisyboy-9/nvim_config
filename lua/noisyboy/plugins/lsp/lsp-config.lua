@@ -35,7 +35,9 @@ lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
     local keymap = vim.keymap
     keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
+    keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
 end)
+
 lspconfig.lua_ls.setup(lsp.nvim_lua_ls())
 
 cmp.setup({
