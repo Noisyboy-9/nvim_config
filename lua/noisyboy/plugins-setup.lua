@@ -43,7 +43,7 @@ return packer.startup({
         use({ "akinsho/toggleterm.nvim", tag = "*" })
 
         -- colorscheme
-        use { "catppuccin/nvim", as = "catppuccin" }
+        use({ "folke/tokyonight.nvim" })
         use("xiyaowong/transparent.nvim")
 
         -- git

@@ -1,11 +1,12 @@
-local ok, catppuccin = pcall(require, "catppuccin")
+local ok, tokyonight = pcall(require, "tokyonight")
 if not ok then
-    print("can't require catppuccin")
+    print("can't require tokyonight")
     return
 end
 
-catppuccin.setup({
-    flavour = "latte"
+tokyonight.setup({
+    style = "storm",
+    light_style = "day",
 })
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "tokyonight"
